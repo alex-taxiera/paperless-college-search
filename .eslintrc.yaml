@@ -1,0 +1,17 @@
+env:
+  browser: true
+  es6: true
+parserOptions:
+  ecmaVersion: 2021
+  sourceType: module
+  project: tsconfig.json
+settings:
+  react:
+    version: detect
+extends:
+  - 'plugin:react/recommended'
+  - '@alex-taxiera/eslint-config-ts'
+rules:
+  react/jsx-uses-react: off
+  react/react-in-jsx-scope: off
+  react/prop-types: off

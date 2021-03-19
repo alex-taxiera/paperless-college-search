@@ -1,0 +1,19 @@
+.school-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(0, 450px));
+  gap: 1em;
+  justify-content: center;
+}
+
+.school-filter {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  #school-search {
+    max-width: 300px;
+  }
+
+  #school-sort {
+    max-width: 200px;
+  }
+}

@@ -1,0 +1,44 @@
+$notCheckOrRange: ':not(input[type="checkbox"]):not(input[type="range"])';
+
+.input-wrapper {
+  .pcs-input {
+    width: 100%;
+    margin: 0;
+    line-height: normal;
+    font-size: 1rem;
+    font-family: inherit;
+    color: inherit;
+    height: 2.5em;
+    
+
+    &#{$notCheckOrRange} {
+      padding: 0.5em 0.8em;
+      background-color: var(--color-card-background);
+      border: 0.1em solid #999;
+      border-radius: 0.5em;
+      transition: border-color 0.2s ease-in-out;
+
+      &:hover {
+        border-color: currentColor;
+      }
+
+      &:focus {
+        box-shadow: none;
+        border-radius: 0.5em;
+        border-color: var(--color-secondary);
+      }
+    }
+  }
+
+  input.pcs-input {
+    &[type="number"]::-webkit-outer-spin-button,
+    &[type="number"]::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+
+    &#{$notCheckOrRange} {
+      appearance: textfield;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+a,
+a:hover {
+  color: inherit;
+  padding: 0.5em;
+  border-radius: 0.75em;
+
+  &.no-decorate {
+    text-decoration: none;
+  }
+
+  p & {
+    color: var(--color-secondary);
+    padding: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  a,
+  a:hover {
+    padding: unset;
+  }
+}

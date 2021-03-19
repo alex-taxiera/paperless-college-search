@@ -1,0 +1,15 @@
+@import '../../styles/breakpoints';
+
+.main-width {
+  margin: 0 3em;
+  width: 100%;
+  max-width: 1500px;
+
+  @include media-breakpoint-up(xl) {
+    margin: 0 8em;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin: 0 0.5em;
+  }
+}
