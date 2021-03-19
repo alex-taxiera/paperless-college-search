@@ -62,7 +62,10 @@ export const SchoolList: FunctionComponent = () => {
 
   return (
     <div className="mt-4">
-      <form className={styles['school-filter']}>
+      <form
+        className={styles['school-filter']}
+        onSubmit={(event) => event.preventDefault()}
+      >
         <TextInput
           id={styles['school-search']}
           label="Search"

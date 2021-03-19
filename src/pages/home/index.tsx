@@ -8,7 +8,7 @@ export const Home: FunctionComponent = () => (
     </p>
     <p>
       This site is a demo for an interview with Paperless Parts in Boston!
-      Find the link to schools to find a directory of higher education
+      Find the link to schools to see a directory of higher education
       insitutions in Massachusetts.
     </p>
     <p>
