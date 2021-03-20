@@ -1,7 +1,6 @@
 import { FunctionComponent } from 'react'
 
-// styles will need to be used "globally"
-import './index.scss'
+import styles from './index.module.scss'
 
 interface Props {
   label: string
@@ -13,7 +12,7 @@ export const InputWrapper: FunctionComponent<Props> = ({
   label,
   children,
 }) => (
-  <div className="input-wrapper">
+  <div className={styles['input-wrapper']}>
     <label htmlFor={id}>
       {label}
     </label>
