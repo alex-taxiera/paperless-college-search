@@ -7,6 +7,15 @@
   flex-flow: column;
   justify-content: space-between;
 
+  header {
+    border-bottom: 0.1em solid #666;
+
+    h3 {
+      height: 1.75em;
+      overflow-y: auto;
+    }
+  }
+
   main {
     display: flex;
     flex-flow: row wrap;
