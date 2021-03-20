@@ -59,6 +59,14 @@ export const SchoolDetails: FunctionComponent = () => {
   const carnegieData = getCarnegieData(data.CCSIZSET)
   const highestDegree = getDegreeType(data.HIGHDEG)
 
+  const type = carnegieData?.type
+    ? (
+      <li>
+        {carnegieData.type}s
+      </li>
+    )
+    : null
+
   const residentiality = !carnegieData?.residentiality
     ? null
     : (
@@ -94,14 +102,12 @@ export const SchoolDetails: FunctionComponent = () => {
               General Information
             </h3>
             <ul>
-              <li>
-                {carnegieData?.type}s
-              </li>
+              {type}
               <li>
                 Highest Degree Awarded:&nbsp;{highestDegree}
               </li>
               <li>
-                School Size:&nbsp;{carnegieData?.size}
+                School Size:&nbsp;{carnegieData?.size ?? 'Unknown'}
               </li>
             </ul>
           </div>
