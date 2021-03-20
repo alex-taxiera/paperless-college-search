@@ -63,25 +63,25 @@ export const SchoolList: FunctionComponent = () => {
   return (
     <div className="mt-4">
       <form
-        className={styles['school-filter']}
+        className={styles.schoolFilter}
         onSubmit={(event) => event.preventDefault()}
       >
         <TextInput
-          id={styles['school-search']}
+          id={styles.schoolSearch}
           label="Search"
           placeholder="Search by name..."
           value={searchText}
           onChange={setSearchText}
         />
         <Select
-          id={styles['school-sort']}
+          id={styles.schoolSort}
           label="Sort By"
           options={schoolSortOptions}
           value={sortBy}
           onChange={setSortBy}
         />
       </form>
-      <div className={cx('mt-4', styles['school-list'])}>
+      <div className={cx('mt-4', styles.schoolList)}>
         {
           filtered.map((school, key) => (
             <SchoolCard key={key} data={school} />

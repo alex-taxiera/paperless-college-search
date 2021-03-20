@@ -87,7 +87,7 @@ export const SchoolDetails: FunctionComponent = () => {
         {data.INSTNM}
       </h2>
       <img src="/university-big.jpg" />
-      <div className={cx('mt-4', styles['content-area'])}>
+      <div className={cx('mt-4', styles.contentArea)}>
         <div>
           <div>
             <h3 className="mb-3">

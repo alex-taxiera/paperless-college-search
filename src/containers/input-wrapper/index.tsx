@@ -12,7 +12,7 @@ export const InputWrapper: FunctionComponent<Props> = ({
   label,
   children,
 }) => (
-  <div className={styles['input-wrapper']}>
+  <div className={styles.inputWrapper}>
     <label htmlFor={id}>
       {label}
     </label>

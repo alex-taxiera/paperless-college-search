@@ -16,7 +16,7 @@ export const SchoolCard: FunctionComponent<Props> = ({
   const carnegieData = getCarnegieData(data.CCSIZSET)
 
   return (
-    <article className={styles['school-card']}>
+    <article className={styles.schoolCard}>
       <header>
         <h3>
           <NavLink to={`/schools/${data.INSTURL}`}>

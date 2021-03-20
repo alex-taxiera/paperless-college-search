@@ -8,7 +8,7 @@ export interface Props {
 }
 
 export const FullPage: FunctionComponent<Props> = ({ className, children }) => (
-  <div className={cx(className, 'p-4', styles['full-page'])}>
+  <div className={cx(className, 'p-4', styles.fullPage)}>
     {children}
   </div>
 )

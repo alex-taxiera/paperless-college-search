@@ -4,8 +4,8 @@ import styles from './index.module.scss'
 import { NavLink } from 'react-router-dom'
 
 export const Header: FunctionComponent = () => (
-  <header className={styles['site-header']}>
-    <a className={styles['skip-to-content-link']} href="#main-content-area">
+  <header className={styles.siteHeader}>
+    <a className={styles.skipToContentLink} href="#main-content-area">
       Skip Navigation
     </a>
     <MainWidth>

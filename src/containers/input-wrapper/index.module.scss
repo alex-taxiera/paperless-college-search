@@ -1,6 +1,6 @@
 $notCheckOrRange: ':not(input[type="checkbox"]):not(input[type="range"])';
 
-.input-wrapper {
+.inputWrapper {
   :global(.pcs-input) {
     width: 100%;
     margin: 0;
@@ -30,7 +30,7 @@ $notCheckOrRange: ':not(input[type="checkbox"]):not(input[type="range"])';
     }
   }
 
-  input.pcs-input {
+  input:global(.pcs-input) {
     &[type="number"]::-webkit-outer-spin-button,
     &[type="number"]::-webkit-inner-spin-button {
       appearance: none;

@@ -31,7 +31,7 @@ export function Select<ID extends OptionID> ({
       label={label}
     >
       <select
-        className={cx(styles['pcs-select'], 'pcs-input')}
+        className={cx(styles.pcsSelect, 'pcs-input')}
         id={id}
         value={value.id}
         onChange={
