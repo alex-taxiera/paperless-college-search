@@ -58,7 +58,18 @@ export const SchoolList: FunctionComponent = () => {
   const filtered = schools.filter(
     ({ INSTNM }) =>
       INSTNM.toLowerCase().includes(searchText.toLowerCase()),
-  ).sort((a, b) => a[sortBy.id] < b[sortBy.id] ? -1 : 1)
+  ).sort((a, b) => {
+    // our data is a bit unclean so we don't have actual numbers
+    // this could have been done in the service level
+    // but setting up complicated data massaging on the front end seems counterintuitive
+    const numA = parseFloat(a[sortBy.id])
+    const numB = parseFloat(b[sortBy.id])
+    if (!isNaN(numA) || !isNaN(numB)) {
+      return (isNaN(numB) ? 0 : numB) - (isNaN(numA) ? 0 : numA)
+    }
+
+    return a[sortBy.id] < b[sortBy.id] ? -1 : 1
+  })
 
   return (
     <div className="mt-4">
