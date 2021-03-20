@@ -21,10 +21,6 @@ export function getAll (): Observable<Array<Program>> {
       id,
       description,
     }))),
-    tap((programs) => {
-      // eslint-disable-next-line no-console
-      console.log('upseting')
-      store.data.upsertMany(programs)
-    }),
+    tap((programs) => store.data.upsertMany(programs)),
   )
 }
